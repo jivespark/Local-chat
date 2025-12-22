@@ -7,5 +7,6 @@ server.listen(1)
 
 while True:
     client, addr = server.accept()
-    print(client.recv(1024).decode())
-    client.send('server test'.encode())
+    while True:
+        print(client.recv(1024).decode())
+    #client.send('server test'.encode())
