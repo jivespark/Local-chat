@@ -9,4 +9,6 @@ while True:
     client, addr = server.accept()
     while True:
         print(client.recv(1024).decode())
+        message=input("Type a message: ")
+        client.send(message.encode())
     #client.send('server test'.encode())
