@@ -2,7 +2,7 @@ import socket
 import threading
 import time
 
-locIP = input("IP to connect to: ")#192.168.0.109
+locIP = input("IP to connect to: ")
 user_input= None
 def input_thread():
     global user_input
