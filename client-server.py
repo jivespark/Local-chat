@@ -80,6 +80,6 @@ while True:
                         break
                     else:
                         print(data.decode())
-            except BlockingIOError:
+            except (OSError, BlockingIOError):
                 pass
             time.sleep(0.01)
