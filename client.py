@@ -2,6 +2,7 @@ import socket
 import threading
 import time
 
+ipv4 = input("IP to connect to: ")#192.168.0.109
 user_input= None
 def input_thread():
     global user_input
@@ -10,7 +11,7 @@ def input_thread():
 threading.Thread(target=input_thread, daemon=True).start()
 
 client=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 9999))
+client.connect((ipv4, 9999))
 client.setblocking(False)
 
 while True:

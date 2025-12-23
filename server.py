@@ -10,9 +10,8 @@ def input_thread():
 threading.Thread(target=input_thread, daemon=True).start()
 
 server=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('127.0.0.1', 9999))
+server.bind(('0.0.0.0', 9999))
 server.listen(1)
-
 
 while True:
     client, addr = server.accept()
